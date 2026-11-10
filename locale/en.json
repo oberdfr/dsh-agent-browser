@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Browser (shared Chromium)",
+    "description": "One Chromium embedded in the DSH Sidebar, shared by the user and the agent: authenticated single-tool automation, bounded UI/API diagnostics, screenshots as attachments and issue reports."
+  }
+}

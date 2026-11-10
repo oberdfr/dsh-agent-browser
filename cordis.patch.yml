@@ -1,0 +1,4 @@
+# dsh-agent-browser bundle patch: one row. The id is fixed so a profile keeps a single Browser panel.
+- insert:
+    - id: dsh-agent-browser
+      name: dsh-agent-browser

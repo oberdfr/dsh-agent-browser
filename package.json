@@ -1,0 +1,48 @@
+﻿{
+    "name":  "dsh-agent-browser",
+    "version":  "0.2.0-dev.1",
+    "type":  "module",
+    "description":  "Shared embedded Browser for the DSH Sidebar: one Chromium, one compact tool, authenticated transport.",
+    "main":  "index.js",
+    "exports":  {
+                    ".":  "./index.js",
+                    "./client":  "./client.js",
+                    "./locale/*.json":  "./locale/*.json",
+                    "./icon":  "./icon.svg",
+                    "./package.json":  "./package.json"
+                },
+    "files":  [
+                  "index.js",
+                  "client.js",
+                  "lib/*.js",
+                  "vendor/**",
+                  "cordis.patch.yml",
+                  "locale/*.json",
+                  "icon.svg",
+                  "README.md",
+                  "LICENSE"
+              ],
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "platform":  "web",
+                               "immediately":  true,
+                               "inject":  [
+                                              "@deepseek-ai/dsh-client-ui-slots",
+                                              "@deepseek-ai/dsh-client-locale",
+                                              "@deepseek-ai/dsh-client-ui-primitives",
+                                              "@deepseek-ai/dsh-client-ui-sidebar-right",
+                                              "@deepseek-ai/dsh-client-ui-conversation",
+                                              "@deepseek-ai/dsh-client-ui-workspace",
+                                              "@deepseek-ai/dsh-client-connection"
+                                          ]
+                           }
+            },
+    "peerDependencies":  {
+                             "@deepseek-ai/schemastery":  "^3.18.5",
+                             "zod":  "^4.4.3"
+                         },
+    "license":  "MIT"
+}
